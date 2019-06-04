@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">element</string>
+    <string name="action_add">Add</string>
+    <string name="action_save">Save</string>
+    <string name="zero">0</string>
+</resources>

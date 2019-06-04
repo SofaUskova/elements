@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:id="@+id/cardView">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+        <EditText
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@+id/delete"
+                android:layout_alignParentTop="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:id="@+id/editText"
+                android:textCursorDrawable="@android:drawable/ic_lock_lock"/>
+
+        <Button
+                android:background="@drawable/ic_clear_black_24dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:id="@+id/delete"/>
+
+        <Button
+                android:layout_marginTop="20dp"
+                android:background="@drawable/ic_exposure_neg_1_black_24dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_below="@+id/editText"
+                android:id="@+id/minus"/>
+
+        <Button
+                android:layout_marginTop="20dp"
+                android:background="@drawable/ic_exposure_plus_1_black_24dp"
+                android:layout_toStartOf="@+id/delete"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_below="@+id/editText"
+                android:id="@+id/plus"/>
+
+        <TextView
+                android:text="@string/zero"
+                android:textSize="25sp"
+                android:gravity="center"
+                android:id="@+id/textView"
+                android:layout_marginTop="25dp"
+                android:layout_toEndOf="@+id/minus"
+                android:layout_toStartOf="@+id/plus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/editText"/>
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>
