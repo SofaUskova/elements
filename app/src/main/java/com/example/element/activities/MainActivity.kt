@@ -34,6 +34,7 @@ class MainActivity : AppCompatActivity() {
             elements = savedInstanceState.getParcelableArrayList<Element>("ELEMENTS")
             adapter = Adapter(elements)
         }
+
         recyclerView.adapter = adapter
     }
 
@@ -52,7 +53,7 @@ class MainActivity : AppCompatActivity() {
             R.id.action_add -> {
                 val element = Element(" ", 0)
                 elements.add(element)
-                adapter.notifyDataSetChanged()
+                adapter.update()
                 true
             }
             R.id.action_save -> {

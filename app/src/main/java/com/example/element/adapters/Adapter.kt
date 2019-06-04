@@ -46,7 +46,7 @@ class Adapter(_elements: ArrayList<Element>) : RecyclerView.Adapter<Adapter.Elem
         }
         elementViewHolder.deleteA.setOnClickListener {
             elements.removeAt(i)
-            this.notifyDataSetChanged()
+            update()
         }
 
         elementViewHolder.editTextA.addTextChangedListener(object : TextWatcher {
@@ -59,6 +59,10 @@ class Adapter(_elements: ArrayList<Element>) : RecyclerView.Adapter<Adapter.Elem
                 elements[i].name = name
             }
         })
+    }
+
+    fun update() {
+        this.notifyDataSetChanged()
     }
 
     override fun onAttachedToRecyclerView(recyclerView: RecyclerView) {
